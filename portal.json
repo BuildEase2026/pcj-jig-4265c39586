@@ -1,0 +1,530 @@
+{
+ "project": {
+  "title": "PCJ-S Pre-Cut Jig",
+  "sub": "Manual pre-cut jig for Nudura straight forms",
+  "client": "Tremco CPG",
+  "status": "ENGINEERING \u00b7 IN DESIGN",
+  "revision": "P2 working",
+  "updated": "14.10.2026"
+ },
+ "renders": [
+  {
+   "file": "renders/overall_iso.png",
+   "title": "Whole jig",
+   "desc": "Bench, side and end bars, V guides (blue), A guide (orange), G guide parked (green), saw on V1."
+  },
+  {
+   "file": "renders/overall_iso_rear.png",
+   "title": "Whole jig, rear",
+   "desc": "Far side: pushers, latch posts, outrigger H-frames."
+  },
+  {
+   "file": "renders/overall_front.png",
+   "title": "Front elevation",
+   "desc": ""
+  },
+  {
+   "file": "renders/overall_top.png",
+   "title": "Plan",
+   "desc": ""
+  },
+  {
+   "file": "renders/saw_drop_on_shoe_iso.png",
+   "title": "Drop-on saw shoe",
+   "desc": "Twin sprung latch jaws (yellow) with click-open detents and trip pins: the saw goes on straight down."
+  },
+  {
+   "file": "renders/square_head_iso.png",
+   "title": "V guide square head",
+   "desc": "Guide screwed and dowelled to the head; cams outboard; lens cursor in the fence."
+  },
+  {
+   "file": "renders/pusher_iso_rear.png",
+   "title": "Far-side pusher",
+   "desc": "Push toggle clamp on a frame-mounted body; guided carrier; acetal pad Z 445-715 for every series."
+  },
+  {
+   "file": "renders/end_gate_iso_rear.png",
+   "title": "End gate",
+   "desc": "Folds out and down onto rubber buffers; light spring stop strips; norelem latches."
+  },
+  {
+   "file": "renders/side_bar_bracket_iso.png",
+   "title": "Side-bar bracket",
+   "desc": "Jacking screws with lock nuts, clamp bolts with heavy washers, T-bolts into the profile."
+  },
+  {
+   "file": "renders/park_ledge_iso.png",
+   "title": "End bar and G park ledge",
+   "desc": "End-bar bracket on the portal beam; 45x45 park ledge on cast brackets."
+  },
+  {
+   "file": "renders/x_datum_iso_rear.png",
+   "title": "X datum and Y fence",
+   "desc": "Hardened datum bars, shimmed datum plate, EPS run-off block on its shelf."
+  },
+  {
+   "file": "renders/a_guide_rack_iso.png",
+   "title": "A guide rack",
+   "desc": "Left (datum) end, clear of the loading path: the A guide lifts off onto these arms."
+  }
+ ],
+ "docs": [
+  {
+   "file": "docs/p2-design-brief.html",
+   "title": "P2 design brief",
+   "sub": "Architecture, decisions and deliverables",
+   "kind": "Page"
+  },
+  {
+   "file": "docs/review-triage-r1.html",
+   "title": "Review triage R1",
+   "sub": "About 80 reviewer findings and their dispositions",
+   "kind": "Page"
+  },
+  {
+   "file": "docs/p2_fastener_schedule.xlsx",
+   "title": "Fastener schedule",
+   "sub": "Generated from the model: designation, role, qty, torque, install notes; purchase totals; bought-out hardware",
+   "kind": "XLSX",
+   "download": true
+  },
+  {
+   "file": "docs/p2_fastener_schedule.csv",
+   "title": "Fastener schedule (CSV)",
+   "sub": "Same data, plain text",
+   "kind": "CSV",
+   "download": true
+  }
+ ],
+ "sweeps": [
+  {
+   "series": "XR35-8",
+   "name": "static + REF form XR35-8",
+   "steps": 1,
+   "clashes": 0,
+   "static": true,
+   "holes": 955
+  },
+  {
+   "series": "XR35-8",
+   "name": "static LOAD state (pushers open, gate folded) XR35-8",
+   "steps": 1,
+   "clashes": 0,
+   "static": true,
+   "holes": 955
+  },
+  {
+   "series": "XR35-8",
+   "name": "gate 0-90",
+   "steps": 19,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "load XR35-8",
+   "steps": 19,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "park V guide X900 -> dx -1650 XR35-8",
+   "steps": 13,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "park V guide X1400 -> dx -1840 XR35-8",
+   "steps": 13,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "park A near pin clamp -> dx 1050 (A guide on rack) XR35-8",
+   "steps": 13,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "G slide park -> Y 397 (V, A parked) XR35-8",
+   "steps": 21,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "pushers close XR35-8",
+   "steps": 6,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "saw V X900 XR35-8 THROUGH heading 90",
+   "steps": 25,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "saw V X900 XR35-8 THROUGH heading -90",
+   "steps": 25,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "saw V X900 XR35-8 STOPPED (shoe meets stop face Y 279.1, blade centre ends Y 219.1)",
+   "steps": 13,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "saw V X1400 XR35-8 THROUGH heading 90",
+   "steps": 25,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "saw V X1400 XR35-8 THROUGH heading -90",
+   "steps": 25,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "saw V X1400 XR35-8 STOPPED (shoe meets stop face Y 279.1, blade centre ends Y 219.1)",
+   "steps": 13,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "saw V X1400 XR35-8 FACE-2 STOPPED from far side (stop face Y 178.1)",
+   "steps": 13,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "saw A XR35-8 heading 57",
+   "steps": 25,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "saw A XR35-8 heading 237",
+   "steps": 25,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "drop-on shoe: straight down onto G at X 1200 (face 1) XR35-8",
+   "steps": 12,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "drop-on G stopped cut X 1000-1400 (face 1) XR35-8",
+   "steps": 18,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "raked G (end-bar Y 83.2 / 316.8) face 1 heading 4.7 XR35-8",
+   "steps": 26,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "raked G (end-bar Y 83.2 / 316.8) face 1 heading 184.7 XR35-8",
+   "steps": 26,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "drop-on shoe: straight down onto G at X 1200 (face 2) XR35-8",
+   "steps": 12,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "drop-on G stopped cut X 1000-1400 (face 2) XR35-8",
+   "steps": 18,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "raked G (end-bar Y 374.0 / 140.4) face 2 heading -4.7 XR35-8",
+   "steps": 26,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "raked G (end-bar Y 374.0 / 140.4) face 2 heading 175.3 XR35-8",
+   "steps": 26,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "saw G Y60 XR35-8 heading 0",
+   "steps": 26,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "saw G Y60 XR35-8 heading 180",
+   "steps": 26,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "saw G Y229 XR35-8 heading 0",
+   "steps": 26,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "saw G Y229 XR35-8 heading 180",
+   "steps": 26,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "saw G Y397 XR35-8 heading 0",
+   "steps": 26,
+   "clashes": 0
+  },
+  {
+   "series": "XR35-8",
+   "name": "saw G Y397 XR35-8 heading 180",
+   "steps": 26,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "static + REF form STD8",
+   "steps": 1,
+   "clashes": 0,
+   "static": true,
+   "holes": 955
+  },
+  {
+   "series": "STD8",
+   "name": "static LOAD state (pushers open, gate folded) STD8",
+   "steps": 1,
+   "clashes": 0,
+   "static": true,
+   "holes": 955
+  },
+  {
+   "series": "STD8",
+   "name": "load STD8",
+   "steps": 19,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "park V guide X900 -> dx -1650 STD8",
+   "steps": 13,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "park V guide X1400 -> dx -1840 STD8",
+   "steps": 13,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "park A near pin clamp -> dx 1050 (A guide on rack) STD8",
+   "steps": 13,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "G slide park -> Y 397 (V, A parked) STD8",
+   "steps": 21,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "pushers close STD8",
+   "steps": 6,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "saw V X900 STD8 THROUGH heading 90",
+   "steps": 25,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "saw V X900 STD8 THROUGH heading -90",
+   "steps": 25,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "saw V X900 STD8 STOPPED (shoe meets stop face Y 279.1, blade centre ends Y 219.1)",
+   "steps": 13,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "saw V X1400 STD8 THROUGH heading 90",
+   "steps": 25,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "saw V X1400 STD8 THROUGH heading -90",
+   "steps": 25,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "saw V X1400 STD8 STOPPED (shoe meets stop face Y 279.1, blade centre ends Y 219.1)",
+   "steps": 13,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "saw V X1400 STD8 FACE-2 STOPPED from far side (stop face Y 178.1)",
+   "steps": 13,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "saw A STD8 heading 57",
+   "steps": 25,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "saw A STD8 heading 237",
+   "steps": 25,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "drop-on shoe: straight down onto G at X 1200 (face 1) STD8",
+   "steps": 12,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "drop-on G stopped cut X 1000-1400 (face 1) STD8",
+   "steps": 18,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "raked G (end-bar Y 83.2 / 316.8) face 1 heading 4.7 STD8",
+   "steps": 26,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "raked G (end-bar Y 83.2 / 316.8) face 1 heading 184.7 STD8",
+   "steps": 26,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "drop-on shoe: straight down onto G at X 1200 (face 2) STD8",
+   "steps": 12,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "drop-on G stopped cut X 1000-1400 (face 2) STD8",
+   "steps": 18,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "raked G (end-bar Y 374.0 / 140.4) face 2 heading -4.7 STD8",
+   "steps": 26,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "raked G (end-bar Y 374.0 / 140.4) face 2 heading 175.3 STD8",
+   "steps": 26,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "saw G Y60 STD8 heading 0",
+   "steps": 26,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "saw G Y60 STD8 heading 180",
+   "steps": 26,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "saw G Y229 STD8 heading 0",
+   "steps": 26,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "saw G Y229 STD8 heading 180",
+   "steps": 26,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "saw G Y397 STD8 heading 0",
+   "steps": 26,
+   "clashes": 0
+  },
+  {
+   "series": "STD8",
+   "name": "saw G Y397 STD8 heading 180",
+   "steps": 26,
+   "clashes": 0
+  }
+ ],
+ "stops": [
+  {
+   "series": "XR35-8",
+   "face": 1,
+   "edge": 228.6
+  },
+  {
+   "series": "XR35-8",
+   "face": 1,
+   "edge": 228.6
+  },
+  {
+   "series": "XR35-8",
+   "face": 2,
+   "edge": 228.6
+  },
+  {
+   "series": "STD8",
+   "face": 1,
+   "edge": 228.6
+  },
+  {
+   "series": "STD8",
+   "face": 1,
+   "edge": 228.6
+  },
+  {
+   "series": "STD8",
+   "face": 2,
+   "edge": 228.6
+  }
+ ],
+ "static": {
+  "solids": 1049,
+  "holes": 955,
+  "clashes": 0,
+  "floating": 0
+ },
+ "zip": {
+  "file": "docs/PCJ-S P2 working pack.zip",
+  "bytes": 2865238
+ }
+}

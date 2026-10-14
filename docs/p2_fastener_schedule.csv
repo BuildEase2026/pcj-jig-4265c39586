@@ -1,0 +1,89 @@
+Designation,Role,Qty,Assemblies,Host thread,Torque Nm,Note
+DIN 7984 M8x16-8.8,T-bolt,24,300 Fasteners,tnut,14,"round holes at the fixed bracket, slotted elsewhere"
+ISO 10511 M5,latch nyloc nut,8,400 Fasteners,steel,6,nyloc under the bracket
+ISO 10642 M5x10,fence strip screw,16,400 Fasteners,alu,5,heads 0.3 below the acetal face
+ISO 10642 M5x20,head screw,8,V guide X1400; V guide X900,alu,5,square head top plate -> fence
+ISO 10642 M6x16,shelf screw,3,400 Fasteners,alu,8,
+ISO 10642 M6x25,board screw,18,400 Fasteners,rivnut,8,countersunk flush with the phenolic face
+ISO 10642 M6x25,guide screw head,8,V guide X1400; V guide X900,alu,8,flush with the guide top (saw shoe runs over)
+ISO 10642 M6x25,guide screw pad,4,V guide X1400; V guide X900,alu,8,flush with the guide top (saw shoe runs over)
+ISO 10642 M8x40,datum bar screw,4,400 Fasteners,alu,18,Loctite 243
+ISO 4017 M10x110-8.8,left portal hanger bolt front,2,100-200 Structure,steel,49,through RHS on crush tube; check after first week
+ISO 4017 M10x110-8.8,left portal hanger bolt rear,2,100-200 Structure,steel,49,through RHS on crush tube; check after first week
+ISO 4017 M10x110-8.8,right portal hanger bolt front,2,100-200 Structure,steel,49,through RHS on crush tube; check after first week
+ISO 4017 M10x110-8.8,right portal hanger bolt rear,2,100-200 Structure,steel,49,through RHS on crush tube; check after first week
+ISO 4017 M10x70-8.8,outrigger bolt,8,100-200 Structure,steel,49,through RHS on crush tube; nut inside the cross rail
+ISO 4017 M8x20-8.8,T-bolt end bracket,8,300 Fasteners,tnut,14,"round holes at the fixed bracket, slotted elsewhere - do not overtighten PTFE ends"
+ISO 4026 M10x20-45H,jacking screw,48,300 Fasteners,alu,35,"set height, lock with the thin nut"
+ISO 4026 M10x20-45H,jacking screw end bracket,16,300 Fasteners,alu,35,"set height, lock with the thin nut"
+"ISO 4026 M8x20, Loctite 243",stud pushrod-carrier,3,400 Fasteners,alu,18,Loctite 243 both ends
+ISO 4032 M10-8,left portal hanger nut front,2,100-200 Structure,steel,49,through RHS on crush tube; check after first week
+ISO 4032 M10-8,left portal hanger nut rear,2,100-200 Structure,steel,49,through RHS on crush tube; check after first week
+ISO 4032 M10-8,outrigger nut,8,100-200 Structure,steel,49,through RHS on crush tube; nut inside the cross rail
+ISO 4032 M10-8,right portal hanger nut front,2,100-200 Structure,steel,49,through RHS on crush tube; check after first week
+ISO 4032 M10-8,right portal hanger nut rear,2,100-200 Structure,steel,49,through RHS on crush tube; check after first week
+ISO 4032 M16-8,lock nut foot,12,100-200 Structure,steel,120,lock against the plate after levelling
+ISO 4032 M16-8,lock nut foot outrigger X-860 Y,1,100-200 Structure,steel,120,lock against the plate after levelling
+ISO 4032 M16-8,lock nut foot outrigger X-860 Y-,1,100-200 Structure,steel,120,lock against the plate after levelling
+ISO 4032 M16-8,lock nut foot outrigger X3048 Y,1,100-200 Structure,steel,120,lock against the plate after levelling
+ISO 4032 M16-8,lock nut foot outrigger X3048 Y-,1,100-200 Structure,steel,120,lock against the plate after levelling
+ISO 4032 M8-8,buffer nut,2,400 Fasteners,steel,25,
+ISO 4035 M10-05,jam nut,48,300 Fasteners,alu,35,lock nut for the jacking screw
+ISO 4035 M10-05,jam nut end bracket,16,300 Fasteners,alu,35,lock nut for the jacking screw
+ISO 4762 M10x30-8.8,clamp bolt,48,300 Fasteners,steel,49,"push-pull with the jacking screws: jack first, then clamp"
+ISO 4762 M10x30-8.8,clamp bolt end bracket,8,300 Fasteners,rivnut,28,"push-pull with the jacking screws: jack first, then clamp"
+ISO 4762 M10x35,datum plate bolt,6,400 Fasteners,alu,35,Loctite 243; re-check perpendicularity 0.2/457 after torque
+ISO 4762 M6x12,clamp screw pusher,12,400 Fasteners,alu,8,Loctite 243
+ISO 4762 M6x16,clip screw fence,10,400 Fasteners,alu,8,
+ISO 4762 M6x20,rod screw,6,400 Fasteners,alu,8,Loctite 243
+ISO 4762 M8x20,pusher body bolt,6,400 Fasteners,alu,18,from below the welded plate
+ISO 4762 M8x30,clip bolt board,10,400 Fasteners,rivnut,16,
+ISO 4762 M8x50,handle bolt,2,400 Fasteners,alu,18,into the handle feet (6082)
+ISO 7089 10,left portal hanger washer front,2,100-200 Structure,steel,,through RHS on crush tube; check after first week
+ISO 7089 10,left portal hanger washer rear,2,100-200 Structure,steel,,through RHS on crush tube; check after first week
+ISO 7089 10,outrigger washer,8,100-200 Structure,steel,,through RHS on crush tube; nut inside the cross rail
+ISO 7089 10,right portal hanger washer front,2,100-200 Structure,steel,,through RHS on crush tube; check after first week
+ISO 7089 10,right portal hanger washer rear,2,100-200 Structure,steel,,through RHS on crush tube; check after first week
+ISO 7093 10,clamp washer,48,300 Fasteners,steel,,
+ISO 7093 10,clamp washer end bracket,8,300 Fasteners,steel,,
+ISO 7379 8x20 M6,shoulder screw pusher pad,6,400 Fasteners,soft,3,into the brass insert; pad must slide freely on the shoulders
+ISO 7379 8x8 M6,shoulder screw gate stop,4,450 End gate,rivnut,8,strip must float 2 mm freely
+ISO 7380 M5x16,latch bolt,8,400 Fasteners,steel,6,nyloc under the bracket
+ISO 7380 M8x12,bracket screw post,4,530 Park,rivnut,16,
+ISO 7380 M8x12,bracket screw rack post,2,535 A rack,rivnut,16,
+ISO 7380 M8x12,leaf bolt hinge,4,400 Fasteners,rivnut,16,Loctite 243
+ISO 7380 M8x16,bracket screw arm,4,530 Park,tnut,14,
+ISO 7380 M8x16,bracket screw arm side,2,530 Park,tnut,14,
+ISO 7380 M8x16,bracket screw ledge,2,530 Park,tnut,14,
+ISO 7380 M8x16,bracket screw rack arm,2,535 A rack,tnut,14,
+ISO 7380 M8x16,end cap screw,16,300 Fasteners,alu,18,into the profile core bore (self-tapping in the 7.0 core)
+ISO 7380 M8x16,end lip screw rack,2,535 A rack,steel,25,
+ISO 8734 10m6x30,dowel riser 1 Y,2,400 Fasteners,steel,,press fit
+ISO 8734 10m6x30,dowel riser 2 Y,2,400 Fasteners,steel,,press fit
+ISO 8734 10m6x30,dowel riser 3 Y,2,400 Fasteners,steel,,press fit
+ISO 8734 10m6x30,dowel riser 4 Y,2,400 Fasteners,steel,,press fit
+ISO 8734 5m6x20,dowel head,4,V guide X1400; V guide X900,steel,,press fit
+ISO 8734 6m6x16,dowel guide,4,V guide X1400; V guide X900,steel,,press fit
+ISO 8734 6m6x16,dowel pusher,6,400 Fasteners,steel,,press fit
+ISO 8734 8m6x16,dowel fixed end bar,2,300 Fasteners,steel,,ream 8H7 on assembly AFTER final alignment
+ISO 8734 8m6x24,dowel fixed,2,300 Fasteners,steel,,ream 8H7 on assembly AFTER final alignment
+M6 brass heat-set 8x10,threaded insert pusher pad,6,400 Fasteners,soft,3,heat-set
+Misumi HNTT8-8,T-nut,24,300 Fasteners,tnut,,insert from the profile end before fitting caps / brackets
+Misumi HNTT8-8,T-nut arm,4,530 Park,tnut,,insert from the profile end before fitting caps / brackets
+Misumi HNTT8-8,T-nut arm side,2,530 Park,tnut,,insert from the profile end before fitting caps / brackets
+Misumi HNTT8-8,T-nut end bracket,8,300 Fasteners,tnut,,insert from the profile end before fitting caps / brackets
+Misumi HNTT8-8,T-nut high clamp cam,2,G guide (parked near side),tnut,,insert from the profile end before fitting caps / brackets
+Misumi HNTT8-8,T-nut ledge,2,530 Park,tnut,,insert from the profile end before fitting caps / brackets
+Misumi HNTT8-8,T-nut puck cam 1,2,A guide,tnut,,insert from the profile end before fitting caps / brackets
+Misumi HNTT8-8,T-nut puck cam 2,2,A guide,tnut,,insert from the profile end before fitting caps / brackets
+Misumi HNTT8-8,T-nut rack arm,2,535 A rack,tnut,,insert from the profile end before fitting caps / brackets
+Misumi HNTT8-8,T-nut rest pad cam lever,2,V guide X1400; V guide X900,tnut,,insert from the profile end before fitting caps / brackets
+Misumi HNTT8-8,T-nut side cam,2,V guide X1400; V guide X900,tnut,,insert from the profile end before fitting caps / brackets
+Misumi HNTT8-8,T-nut top cam lever,4,V guide X1400; V guide X900,tnut,,insert from the profile end before fitting caps / brackets
+csk M6 steel,rivnut board,18,400 Fasteners,rivnut,8,set with a calibrated rivnut tool; verify spin-out on a sample
+csk M6 steel,rivnut gate stop,4,400 Fasteners,rivnut,8,set with a calibrated rivnut tool; verify spin-out on a sample
+csk M8 steel,rivnut fence rail,10,400 Fasteners,rivnut,16,set with a calibrated rivnut tool; verify spin-out on a sample
+csk M8 steel,rivnut hinge,4,400 Fasteners,rivnut,16,set with a calibrated rivnut tool; verify spin-out on a sample
+csk M8 steel,rivnut portal post,4,530 Park,rivnut,16,set with a calibrated rivnut tool; verify spin-out on a sample
+csk M8 steel,rivnut rack post,2,535 A rack,rivnut,16,set with a calibrated rivnut tool; verify spin-out on a sample
+flanged M10 steel,rivnut portal beam,8,300 Fasteners,rivnut,28,set with a calibrated rivnut tool; verify spin-out on a sample

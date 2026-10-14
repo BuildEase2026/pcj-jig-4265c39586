@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="logo.png">
+<title>PCJ-S Pre-Cut Jig · BuildEase Project Environment</title>
+<style>
+  :root { --blue:#17458c; --blue-d:#0f3268; --gold:#d6a935; --ink:#15171b; --muted:#5d6472; --line:#dde2ea;
+    --bg:#f1f3f6; --card:#fff; --chip:#e4e9f2; --red:#c62f2f; --ok:#1d7a3f; }
+  * { box-sizing:border-box; }
+  [hidden] { display:none !important; }
+  html,body { margin:0; height:100%; background:var(--bg); color:var(--ink); font-family:"Segoe UI",-apple-system,Roboto,Helvetica,Arial,sans-serif; }
+  body { display:flex; flex-direction:column; height:100dvh; overflow:hidden; }
+  a { color:var(--blue); }
+  #top { background:var(--blue); color:#fff; flex:0 0 auto; padding-top:env(safe-area-inset-top,0px); }
+  #top .row { display:flex; align-items:center; gap:12px; padding:8px max(14px,env(safe-area-inset-right,0px)) 8px max(14px,env(safe-area-inset-left,0px)); }
+  #top .logo { background:#fff; border-radius:6px; padding:3px 6px; display:flex; }
+  #top .logo img { height:28px; display:block; }
+  #top .names { min-width:0; flex:1; }
+  #top .env { font-size:11px; letter-spacing:.08em; text-transform:uppercase; opacity:.8; }
+  #top .job { font-size:16px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  #top .status { font-size:11px; font-weight:700; letter-spacing:.06em; background:#fff; color:var(--blue); border-radius:4px; padding:3px 7px; white-space:nowrap; }
+  #tabs { display:flex; gap:2px; padding:0 8px; overflow-x:auto; scrollbar-width:none; }
+  #tabs::-webkit-scrollbar { display:none; }
+  #tabs a { color:#dfe7f5; text-decoration:none; padding:8px 11px 9px; font-size:14px; white-space:nowrap; border-bottom:3px solid transparent; }
+  #tabs a.on { color:#fff; border-bottom-color:var(--gold); font-weight:600; }
+  main { flex:1; min-height:0; position:relative; }
+  .page { position:absolute; inset:0; overflow:auto; }
+  .wrap { max-width:1180px; margin:0 auto; padding:18px max(16px,env(safe-area-inset-right,0px)) 40px max(16px,env(safe-area-inset-left,0px)); }
+  h2 { font-size:18px; margin:22px 0 4px; }
+  h2:first-child { margin-top:4px; }
+  .note { color:var(--muted); font-size:13px; margin:0 0 12px; }
+  .hero { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px; display:flex; flex-wrap:wrap; gap:14px 28px; align-items:flex-end; }
+  .hero h1 { font-size:22px; margin:0; }
+  .hero .facts { display:flex; flex-wrap:wrap; gap:6px 22px; font-size:13px; color:var(--muted); }
+  .hero .facts b { color:var(--ink); font-weight:600; }
+  .dl a { display:inline-block; background:var(--blue); color:#fff; text-decoration:none; border-radius:6px; padding:8px 12px; font-size:14px; }
+  .open3d { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:16px; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px; align-items:center; }
+  .open3d img { width:100%; border-radius:8px; border:1px solid var(--line); background:#fff; }
+  .open3d .btn { display:inline-block; background:var(--blue); color:#fff; text-decoration:none; border-radius:6px; padding:10px 14px; font-weight:600; margin:4px 6px 0 0; }
+  .open3d ul { margin:6px 0 10px; padding-left:18px; font-size:14px; line-height:1.5; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:12px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; overflow:hidden; display:flex; flex-direction:column; text-decoration:none; color:inherit; }
+  .card img { width:100%; aspect-ratio:16/10; object-fit:cover; background:#fff; border-bottom:1px solid var(--line); }
+  .card .t { padding:9px 12px 12px; }
+  .card .ttl { font-weight:600; }
+  .card .meta { color:var(--muted); font-size:13px; margin-top:2px; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:10px; }
+  .kpi { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px; }
+  .kpi .v { font-size:24px; font-weight:700; font-variant-numeric:tabular-nums; }
+  .kpi .l { color:var(--muted); font-size:13px; }
+  .kpi.ok .v { color:var(--ok); }
+  .tw { overflow-x:auto; background:var(--card); border:1px solid var(--line); border-radius:10px; }
+  table { border-collapse:collapse; width:100%; font-size:13px; font-variant-numeric:tabular-nums; }
+  th,td { padding:6px 10px; border-bottom:1px solid var(--line); text-align:left; }
+  th { background:var(--chip); position:sticky; top:0; }
+  td.n { text-align:right; }
+  .pill { display:inline-block; border-radius:4px; padding:1px 7px; font-size:12px; font-weight:700; }
+  .pill.ok { background:#dff2e6; color:var(--ok); } .pill.bad { background:#fbe1e1; color:var(--red); }
+  .docs { display:flex; flex-direction:column; gap:8px; }
+  .doc { display:flex; gap:12px; align-items:center; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px; text-decoration:none; color:inherit; }
+  .doc .k { background:var(--chip); color:var(--blue); font-weight:700; font-size:12px; border-radius:4px; padding:4px 7px; min-width:44px; text-align:center; }
+  .doc .ttl { font-weight:600; } .doc .meta { color:var(--muted); font-size:13px; }
+  #v3d { overflow:hidden; } #v3d iframe { border:0; width:100%; height:100%; display:block; background:#f4f6f8; }
+  #lightbox { position:fixed; inset:0; background:rgba(10,14,20,.88); display:flex; align-items:center; justify-content:center; padding:20px; z-index:9; }
+  #lightbox img { max-width:100%; max-height:100%; border-radius:6px; background:#fff; }
+  @media (max-width:760px){ .open3d { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header id="top">
+  <div class="row">
+    <a class="logo" href="#/"><img src="logo.png" alt="BuildEase"></a>
+    <div class="names"><div class="env">BuildEase Project Environment</div><div class="job" id="jobname"></div></div>
+    <div class="status" id="status"></div>
+  </div>
+  <nav id="tabs"></nav>
+</header>
+<main>
+  <section class="page" id="home" hidden><div class="wrap" id="homewrap"></div></section>
+  <section class="page" id="v3d" hidden><iframe id="frame3d" title="3D model and cut sequences" allow="fullscreen"></iframe></section>
+  <section class="page" id="renders" hidden><div class="wrap" id="renderwrap"></div></section>
+  <section class="page" id="verify" hidden><div class="wrap" id="verifywrap"></div></section>
+  <section class="page" id="documents" hidden><div class="wrap" id="docwrap"></div></section>
+</main>
+<div id="lightbox" hidden><img id="lbimg" alt=""></div>
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const mb = b => `${(b / 1e6).toFixed(1)} MB`;
+let P;
+const TABS = [['', 'Home'], ['3d', '3D model + cut sequences'], ['renders', 'Renders'], ['verify', 'Verification'], ['documents', 'Documents']];
+
+function showPage(id){ for (const p of document.querySelectorAll('.page')) p.hidden = p.id !== id; }
+function route(){
+  const h = location.hash.replace(/^#\/?/, '');
+  const tab = TABS.find(t => t[0] === h) ? h : '';
+  for (const a of $('tabs').children) a.classList.toggle('on', a.dataset.h === tab);
+  if (tab === '3d'){ if (!$('frame3d').src) $('frame3d').src = 'viewer.html'; showPage('v3d'); }
+  else if (tab === 'renders'){ renderRenders(); showPage('renders'); }
+  else if (tab === 'verify'){ renderVerify(); showPage('verify'); }
+  else if (tab === 'documents'){ renderDocs(); showPage('documents'); }
+  else { renderHome(); showPage('home'); }
+}
+function renderCard(r){ return `<a class="card" href="${esc(r.file)}" data-lb="${esc(r.file)}"><img loading="lazy" src="${esc(r.file)}" alt="${esc(r.title)}"><div class="t"><div class="ttl">${esc(r.title)}</div>${r.desc ? `<div class="meta">${esc(r.desc)}</div>` : ''}</div></a>`; }
+function summary(){
+  const sw = P.sweeps.filter(s => !s.static), clean = sw.filter(s => s.clashes === 0).length;
+  const st = P.static;
+  return `<div class="kpis">
+    ${st ? `<div class="kpi ${st.clashes === 0 ? 'ok' : ''}"><div class="v">${st.solids.toLocaleString()}</div><div class="l">solids in the model, ${st.clashes} clashes, ${st.floating} floating</div></div>
+    <div class="kpi ok"><div class="v">${st.holes.toLocaleString()}</div><div class="l">fastener engagements checked through real holes</div></div>` : ''}
+    <div class="kpi ${clean === sw.length ? 'ok' : ''}"><div class="v">${clean} / ${sw.length}</div><div class="l">motion sweeps clash-free (both series)</div></div>
+    <div class="kpi ok"><div class="v">${P.stops.length ? P.stops.map(s => s.edge.toFixed(1)).every(v => v === P.stops[0].edge.toFixed(1)) ? P.stops[0].edge.toFixed(1) : 'varies' : '–'}</div><div class="l">stopped cuts: blade edge finishes on the Y setting (mm)</div></div></div>`;
+}
+function renderHome(){
+  const p = P.project;
+  $('homewrap').innerHTML = `<div class="hero"><div><div class="note" style="margin:0">${esc(p.sub)}</div><h1>${esc(p.title)}</h1></div>
+    <div class="facts"><span>Client <b>${esc(p.client)}</b></span><span>Status <b>${esc(p.status)}</b></span><span>Revision <b>${esc(p.revision)}</b></span><span>Updated <b>${esc(p.updated)}</b></span></div>
+    <div class="dl"><a href="${esc(P.zip.file)}" download>&#8681; Download everything (ZIP, ${mb(P.zip.bytes)})</a></div></div>
+    <h2>3D model and cut sequences</h2><p class="note">Every part of the jig as a real solid, with two animated cut sheets.</p>
+    <div class="open3d"><a href="#/3d"><img src="${esc((P.renders[0] || {}).file || '')}" alt="Pre-cut jig"></a><div>
+      <ul><li><b>Form A</b>: V through, V stopped, A angled and G horizontal cuts on both faces, roll-over, 7 pieces.</li>
+      <li><b>Form B</b>: U notch with the drop-on saw shoe, and a shallow rake set from both end-bar tapes.</li>
+      <li>Tape measures, cut-sheet clamp settings, and labels printed onto the front face of each piece.</li></ul>
+      <a class="btn" href="#/3d">Open the 3D model</a><a class="btn" href="viewer.html" target="_blank" rel="noopener">Full screen</a></div></div>
+    <h2>Verification</h2><p class="note">Exact solid clash checks and motion sweeps, run on the model as built.</p>${summary()}
+    <h2>Renders</h2><div class="grid">${P.renders.slice(0, 6).map(renderCard).join('')}</div>
+    <p class="note" style="margin-top:8px"><a href="#/renders">All renders &rarr;</a> &nbsp; <a href="#/documents">Documents &rarr;</a></p>`;
+}
+function renderRenders(){ $('renderwrap').innerHTML = `<h2>Renders</h2><p class="note">Rendered from the model solids. Tap a render to enlarge.</p><div class="grid">${P.renders.map(renderCard).join('')}</div>`; }
+function renderVerify(){
+  const rows = P.sweeps.map(s => `<tr><td>${esc(s.series || '')}</td><td>${esc(s.name)}</td><td class="n">${s.static ? 'static' : s.steps}</td><td>${s.clashes === 0 ? '<span class="pill ok">clear</span>' : `<span class="pill bad">${s.clashes} clashes</span>`}</td></tr>`).join('');
+  const stops = P.stops.map(s => `<tr><td>${esc(s.series)}</td><td>Face ${s.face}</td><td class="n">${s.edge.toFixed(1)}</td></tr>`).join('');
+  $('verifywrap').innerHTML = `<h2>Verification</h2><p class="note">Static: every solid tested against every other (exact OpenCASCADE booleans); every fastener, stud, cam and plunger must pass through a drilled, tapped or slotted hole; every part must connect through other parts to the floor. Motion: each moving assembly is stepped through its full travel and tested against everything else at every step.</p>
+    ${summary()}<h2>Motion sweeps</h2><div class="tw"><table><tr><th>Series</th><th>Sweep</th><th>Steps</th><th>Result</th></tr>${rows}</table></div>
+    ${stops ? `<h2>Stopped cuts</h2><p class="note">Where the blade's leading edge finishes when the shoe meets the stop (setting Y 228.6).</p><div class="tw"><table><tr><th>Series</th><th>Face</th><th>Blade edge Y</th></tr>${stops}</table></div>` : ''}`;
+}
+function renderDocs(){
+  $('docwrap').innerHTML = `<h2>Documents</h2><p class="note">Working documents for the P2 engineering stage. Drawings follow once the structural calcs are done.</p>
+    <div class="docs">${P.docs.map(d => `<a class="doc" href="${esc(d.file)}" ${d.download ? 'download' : ''}><span class="k">${esc(d.kind)}</span><span><div class="ttl">${esc(d.title)}</div><div class="meta">${esc(d.sub)}</div></span></a>`).join('')}
+    <a class="doc" href="${esc(P.zip.file)}" download><span class="k">ZIP</span><span><div class="ttl">Everything</div><div class="meta">Renders, documents and the 3D viewer, ${mb(P.zip.bytes)}</div></span></a></div>`;
+}
+document.addEventListener('click', e => {
+  const a = e.target.closest('[data-lb]'); if (a){ e.preventDefault(); $('lbimg').src = a.dataset.lb; $('lightbox').hidden = false; return; }
+  if (e.target.closest('#lightbox')) $('lightbox').hidden = true;
+});
+addEventListener('keydown', e => { if (e.key === 'Escape') $('lightbox').hidden = true; });
+(async () => {
+  P = await (await fetch('portal.json', {cache:'no-cache'})).json();
+  $('jobname').textContent = P.project.title;
+  $('status').textContent = `${P.project.status} · ${P.project.revision}`;
+  $('tabs').innerHTML = TABS.map(([h, t]) => `<a href="#/${h}" data-h="${h}">${esc(t)}</a>`).join('');
+  addEventListener('hashchange', route); route();
+})();
+</script>
+</body>
+</html>
